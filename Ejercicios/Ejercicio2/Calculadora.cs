@@ -5,10 +5,11 @@ do
     Console.WriteLine("1- Suma");
     Console.WriteLine("2- Resta");
     Console.WriteLine("3- Divicion");
-    Console.WriteLine("4- Producot");
+    Console.WriteLine("4- Producto");
+    Console.WriteLine("5- Datos");
     Console.WriteLine("0- Salir");
     opcion = Convert.ToInt32(Console.ReadLine());
-    if (opcion != 0)
+    if (opcion != 0 && opcion != 5)
     {
         Console.WriteLine("Ingrese el primer numero: ");
         num1 = Convert.ToInt32(Console.ReadLine());
@@ -36,5 +37,18 @@ do
                 break;
         }
     }
-    
+    if (opcion == 5)
+    {
+        Console.WriteLine("Ingrese un numero: ");
+        num1 = Convert.ToInt32(Console.ReadLine());
+        if (num1 < 0)
+        {
+            Console.WriteLine("El valor absoluto de " + num1 + "es: " + (-1 * num1));
+        }
+        else
+        {
+            Console.WriteLine("El valor abosluto de " + num1 + "es: " + num1);
+        }
+        Console.WriteLine("El cuadrado de " + num1 + "es: " + (num1 * num1));
+    }
 } while (opcion != 0);
